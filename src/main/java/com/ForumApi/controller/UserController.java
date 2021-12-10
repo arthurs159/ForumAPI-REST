@@ -16,6 +16,9 @@ import com.ForumApi.dto.UserDTO;
 import com.ForumApi.dto.UserDTOLessDetail;
 import com.ForumApi.services.UserService;
 
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -37,7 +40,9 @@ public class UserController {
 	
 	@DeleteMapping("/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deleteById(@PathVariable Long id) {
+	public ResponseEntity<Void> deleteById(@PathVariable Long id) {
 		service.delete(id);
+		return ResponseEntity.noContent().build();
 	}
+	
 }
