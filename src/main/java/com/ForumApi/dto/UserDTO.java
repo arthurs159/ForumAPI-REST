@@ -1,12 +1,16 @@
 package com.ForumApi.dto;
 
-import java.time.LocalDate;
+import java.time.Instant;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserDTO {
 	
 	private Long id;
@@ -17,6 +21,6 @@ public class UserDTO {
 	
 	private String lastName;
 	
-	private LocalDate birthDate;
+	private Instant birthDate;
 
 }

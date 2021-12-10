@@ -1,6 +1,6 @@
 package com.ForumApi.entities;
 
-import java.time.LocalDate;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class User {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false)
 	private String email;
 	
 	@Column(nullable = false)
@@ -46,8 +46,8 @@ public class User {
 	@Column(nullable = false)
 	private String lastName;
 	
-	@Column(nullable = false)
-	private LocalDate birthDate;
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant birthDate;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_user_role",
