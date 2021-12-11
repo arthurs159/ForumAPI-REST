@@ -1,5 +1,7 @@
 package com.ForumApi.dto;
 
+import com.ForumApi.entities.User;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,5 +14,11 @@ public class UserDTOLessDetail {
 	private String email;
 	
 	private String firstName;
+	
+	public UserDTOLessDetail(User user) {
+		id = user.getId();
+		firstName = user.getFirstName();
+		email = user.getEmail();
+	}
 
 }
