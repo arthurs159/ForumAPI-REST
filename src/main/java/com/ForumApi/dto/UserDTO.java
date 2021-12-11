@@ -4,7 +4,6 @@ import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.ForumApi.entities.Role;
 import com.ForumApi.entities.User;
 
 import lombok.AllArgsConstructor;
@@ -22,21 +21,22 @@ public class UserDTO {
 	
 	private String email;
 	
-	private String password;
-	
 	private String firstName;
 	
 	private String lastName;
 	
 	private Instant birthDate;
 	
-	Set<Role> roles = new HashSet<>();
+	Set<RoleDTO> roles = new HashSet<>();
 	
 	public UserDTO(User user) {
 		id = user.getId();
 		firstName = user.getFirstName();
 		lastName = user.getLastName();
 		email = user.getEmail();
+		birthDate = user.getBirthDate();
+		user.getRoles().forEach(role -> this.roles.add(new RoleDTO(role)));
+
 	}
 
 }
