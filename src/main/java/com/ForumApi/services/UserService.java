@@ -32,12 +32,12 @@ public class UserService {
 	@Transactional(readOnly = true)
 	public UserDTO findById(Long id) throws UserNotFoundException{
 		Optional<User> obj = repository.findById(id);
-		User entity = obj.orElseThrow(() -> new UserNotFoundException("ID não encontrado "));
+		User entity = obj.orElseThrow(() -> new UserNotFoundException(id));
 		return new UserDTO(entity);
 	}
-//	
-//	public void delete(Long id) {
-//		repository.deleteById(id);
-//	}
+	
+	public void delete(Long id) throws UserNotFoundException {
+		repository.deleteById(id);
+	}
 	
 }

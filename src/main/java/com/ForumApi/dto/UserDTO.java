@@ -36,7 +36,6 @@ public class UserDTO {
 		email = user.getEmail();
 		birthDate = user.getBirthDate();
 		user.getRoles().forEach(role -> this.roles.add(new RoleDTO(role)));
-
 	}
 
 }
