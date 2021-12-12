@@ -47,6 +47,7 @@ public class UserService {
 		repository.deleteById(id);
 	}
 	
+	@Transactional
 	public UserDTO insert(UserInsertDTO dto){
 			User entity = new User();
 			dtoToEntity(dto, entity);
@@ -55,9 +56,14 @@ public class UserService {
 			return new UserDTO(entity);
 	}
 	
-	
-	
-	
+	@Transactional
+	public UserDTO update(Long id, UserInsertDTO dto) {
+		User entityUser = repository.getOne(id);
+		dtoToEntity(dto, entityUser);
+		entityUser.setPassword(dto.getPassword());
+		entityUser = repository.save(entityUser);
+		return new UserDTO(entityUser);
+	}
 	
 	
 	private void dtoToEntity(UserDTO dto, User entity) {
