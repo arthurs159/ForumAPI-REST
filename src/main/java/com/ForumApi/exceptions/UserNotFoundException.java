@@ -5,7 +5,7 @@ public class UserNotFoundException extends Exception{
 	private static final long serialVersionUID = 1L;
 	
 	public UserNotFoundException(Long msg) {
-		super("User not found ID = " + msg);
+		super("ID Não encontrado =( id = " + msg);
 	}
 
 }
