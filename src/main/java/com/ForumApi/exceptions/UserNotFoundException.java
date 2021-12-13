@@ -7,5 +7,9 @@ public class UserNotFoundException extends Exception{
 	public UserNotFoundException(Long msg) {
 		super("ID Não encontrado =( id = " + msg);
 	}
+	
+	public UserNotFoundException(String msg) {
+		super("ID Não encontrado =( id = " + msg);
+	}
 
 }

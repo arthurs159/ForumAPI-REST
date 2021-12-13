@@ -12,3 +12,9 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (4, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (5, 2);
+
+INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('Problema com String', 'Meu comando de string não funciona, alguem consegue me ajudar?', '2020-12-12T13:00:00Z', 2, 1);
+INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('Como limpar o projeto React?', 'Iniciei um projeto React, mas veio cheio de arquivos, qual posso excluir?', '2020-12-12T13:00:00Z', 3, 1);
+INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('O Array está dando out of index', 'Criei esse Array, mas não funciona', '2020-12-12T13:00:00Z', 4, 1);
+INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('Qual melhor curso de Angular?', 'Criei esse tópico pra galera iniciante encontrar os melhores cursos', '2020-12-12T13:00:00Z', 5, 1);
+INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('Pyton ou C#???', 'Quero começar a codar, mas estou em dúvida em qual liguagem seguir, sugestões?', '2020-12-12T13:00:00Z', 1, 1);
