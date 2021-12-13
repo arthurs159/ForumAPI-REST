@@ -30,6 +30,7 @@ public class QuestionController {
 	public ResponseEntity<QuestionDTO> findById(@PathVariable Long id) throws UserNotFoundException{
 		QuestionDTO question = service.findById(id);
 		return ResponseEntity.ok().body(question);
-		
 	}
+	
+	
 }
