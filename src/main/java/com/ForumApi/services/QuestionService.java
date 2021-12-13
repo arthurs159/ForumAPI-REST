@@ -44,6 +44,20 @@ public class QuestionService {
 		return new QuestionDTO(question);
 	}
 
+	@Transactional
+	public QuestionDTO update(Long id, QuestionDTO dto) {
+		Question entity = repository.getOne(id);
+		dtoToEntity(dto, entity);
+		entity = repository.save(entity);
+		return new QuestionDTO(entity);
+	}
+	
+	public void delete(Long id) {
+		repository.deleteById(id);
+	}
+	
+	
+	
 	public void dtoToEntity(QuestionDTO dto, Question entity) {
 		entity.setTitle(dto.getTitle());
 		entity.setBody(dto.getBody());
