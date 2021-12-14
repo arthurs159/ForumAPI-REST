@@ -31,4 +31,8 @@ public class AnswerService {
 		Answer entity = review.orElseThrow(() -> new UserNotFoundException(id));
 		return new AnswerDTO(entity);
 	}
+	
+	public void delete(Long id) {
+			repository.deleteById(id);
+	}
 }
