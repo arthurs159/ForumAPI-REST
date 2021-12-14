@@ -18,3 +18,12 @@ INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('Como
 INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('O Array está dando out of index', 'Criei esse Array, mas não funciona', '2020-12-12T13:00:00Z', 4, 1);
 INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('Qual melhor curso de Angular?', 'Criei esse tópico pra galera iniciante encontrar os melhores cursos', '2020-12-12T13:00:00Z', 5, 1);
 INSERT INTO QUESTION (TITLE, BODY, MOMENT, USER_ID, QUESTION_ENUM) VALUES ('Pyton ou C#???', 'Quero começar a codar, mas estou em dúvida em qual liguagem seguir, sugestões?', '2020-12-12T13:00:00Z', 1, 1);
+
+INSERT INTO ANSWER (BODY, MOMENT, QUESTION_ID, USER_ID) VALUES ('Esse problema eu tive semana retrasada, você deve reiniciar o pc!!', '2020-12-12T13:00:00Z', 1, 1);
+INSERT INTO ANSWER (BODY, MOMENT, QUESTION_ID, USER_ID) VALUES ('Clica em opções e vai em display, lá vai ter uma box e voce clica nela', '2020-12-12T13:00:00Z', 2, 2);
+INSERT INTO ANSWER (BODY, MOMENT, QUESTION_ID, USER_ID) VALUES ('Quando acontece isso é porque o array não suporta essa quantidade dentro dele', '2020-12-12T13:00:00Z', 3, 3);
+INSERT INTO ANSWER (BODY, MOMENT, QUESTION_ID, USER_ID) VALUES ('Na udemy existem vários, mas o mais completo é da Loyane', '2020-12-12T13:00:00Z', 4, 4);
+INSERT INTO ANSWER (BODY, MOMENT, QUESTION_ID, USER_ID) VALUES ('Python é a linguagem do FUTURO, aproveite para aprender', '2020-12-12T13:00:00Z', 5, 5);
+INSERT INTO ANSWER (BODY, MOMENT, QUESTION_ID, USER_ID) VALUES ('Acho que pode ser problema de sintaxe, tente de outra forma ou olhe a documenção', '2020-12-12T13:00:00Z', 1, 3);
+INSERT INTO ANSWER (BODY, MOMENT, QUESTION_ID, USER_ID) VALUES ('Não aconselho a fazer curso, procure na internet e lá tem todas as dicas', '2020-12-12T13:00:00Z', 4, 4);
+INSERT INTO ANSWER (BODY, MOMENT, QUESTION_ID, USER_ID) VALUES ('Da uma olhadinha nesse video que mandei, acho que a sulução está nele no minuto 2:31', '2020-12-12T13:00:00Z', 2, 3);
