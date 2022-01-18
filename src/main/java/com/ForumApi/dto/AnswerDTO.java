@@ -16,14 +16,14 @@ public class AnswerDTO {
 	private Long id;
 	private String body;
 	private Instant moment;
-	private Long question;
+	private Long questionId;
 	private Long userId;
 	
 	public AnswerDTO(Answer entity) {
 		id = entity.getId();
 		body = entity.getBody();
 		moment = entity.getMoment();
-		question = entity.getQuestion().getId();
+		questionId = entity.getQuestion().getId();
 		userId = entity.getUser().getId();
 	}
 }
