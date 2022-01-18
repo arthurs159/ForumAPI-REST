@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ForumApi.dto.AnswerDTO;
+import com.ForumApi.dto.QuestionDTO;
 import com.ForumApi.entities.Answer;
 import com.ForumApi.entities.Question;
 import com.ForumApi.entities.User;
@@ -42,17 +43,23 @@ public class AnswerService {
 		return new AnswerDTO(entity);
 	}
 	
+	@Transactional
+	public AnswerDTO insert(AnswerDTO dto) {
+		Answer answer = new Answer();
+		dtoToEntity(dto, answer);
+		answer = repository.save(answer);
+		return new AnswerDTO(answer);
+	}
+	
 	public void delete(Long id) {
 			repository.deleteById(id);
 	}
-	
+
 	public void dtoToEntity(AnswerDTO dto, Answer entity) {
 		entity.setBody(dto.getBody());
 		entity.setMoment(dto.getMoment());
-		
 		Question question = questionRepository.getOne(dto.getQuestionId());
 		entity.setQuestion(question);
-		
 		User user = userRepository.getOne(dto.getUserId());
 		entity.setUser(user);
 
