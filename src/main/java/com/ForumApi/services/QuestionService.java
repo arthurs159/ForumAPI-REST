@@ -51,13 +51,11 @@ public class QuestionService {
 		entity = repository.save(entity);
 		return new QuestionDTO(entity);
 	}
-	
+
 	public void delete(Long id) {
 		repository.deleteById(id);
 	}
-	
-	
-	
+
 	public void dtoToEntity(QuestionDTO dto, Question entity) {
 		entity.setTitle(dto.getTitle());
 		entity.setBody(dto.getBody());
